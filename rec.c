@@ -14,7 +14,6 @@ int sum_array_iter (int sum, int *mass, int count)
 	if (count == 0){
 		return sum;
 	}
-	printf("sum_array_iter (%d,%d,%d)\n", sum, *mass, count);
 	sum = sum + *mass;
 	mass = mass + 1;
 	count = count - 1;
@@ -26,6 +25,7 @@ int fibonachi (int num)
 	if (num == 2 || num == 1 ) {
 		return 1;
 	}
+	printf("num = %d, fibonachi = %d\n", num, fibonachi (num - 1) + fibonachi (num - 2));
 	return fibonachi (num - 1) + fibonachi (num - 2);
 }
 
@@ -41,7 +41,7 @@ int fib_iter (int first, int second, int num, int tmp, int count )
 	first = second;
 	second = tmp;
 	count ++;
-	return fib_iter(first,second,num,tmp,count );
+	return fib_iter(first, second, num, tmp, count);
 }
 
 int string (char *str, int sum) 
